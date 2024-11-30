@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AlertresVer2.MainPage"
+             Title="Alertres">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="15" Spacing="10">
+            <HorizontalStackLayout Spacing="10">
+                <Image Source="location.png" HeightRequest="25"></Image>
+                <VerticalStackLayout>
+                    <Label FontSize="Caption" Text="Detected Location"></Label>
+                    <Label Text="Meycauayan, Bulacan"></Label>
+                </VerticalStackLayout>
+            </HorizontalStackLayout>
+            <VerticalStackLayout Spacing="5" Padding="10">
+                <Label 
+                    FontSize="Medium"
+                    Text="Having an emergency?" />
+                <Label
+                    FontSize="Header"
+                    Text="Press the 911 button, you will be redirected to a 911 call."
+                    />
+            </VerticalStackLayout>
+            <ImageButton
+                Source="red_button"
+                HeightRequest="150"
+                WidthRequest="150"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                Clicked="Button_Clicked"
+                CornerRadius="50">
+            </ImageButton>
+            <Grid RowSpacing="10" ColumnSpacing="10" HeightRequest="150">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="contactsBtn" Clicked="contactsBtn_Clicked" Grid.Column="0" Text="Hotlines"></Button>
+                <Button x:Name="informationBtn" Clicked="informationBtn_Clicked" Grid.Column="1" Grid.Row="0" Text="Guides"></Button>
+            </Grid>
+            <Button x:Name="settingsBtn" Clicked="settingsBtn_Clicked" HeightRequest="100"  Text="Settings/Profile"></Button>
+            <Label x:Name="tester"></Label>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

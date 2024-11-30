@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AlertresVer2.Pages.guideContentPage"
+             Title="guideContentPage">
+    <VerticalStackLayout Spacing="10">
+        <Label FontSize="Header" x:Name="titleLabel"></Label>
+        <Label FontSize="Subtitle" x:Name="subtitleLabel"></Label>
+        <Label FontSize="Caption" x:Name="languageLabel"></Label>
+        <VerticalStackLayout Spacing="15">
+            <Label x:Name="tocLabel"></Label>
+            <Label x:Name="firstLabel"></Label>
+            <Label x:Name="secondLabel"></Label>
+            <Label x:Name="thirdLabel"></Label>
+        </VerticalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>

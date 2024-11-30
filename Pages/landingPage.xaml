@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AlertresVer2.landingPage"
+             Title="Local Hotlines">
+    <ScrollView>
+        <VerticalStackLayout
+        Spacing="15"
+        Padding="10,10, 10,10"
+        x:Name="rootLayout">
+            <VerticalStackLayout>
+                <HorizontalStackLayout Spacing="10">
+                    <Image Source="location" HeightRequest="50"></Image>
+                    <VerticalStackLayout>
+                        <Label FontSize="Caption" Text="Detected Location"></Label>
+                        <Label Text="Undetected" x:Name="locationLabel"></Label>
+                    </VerticalStackLayout>
+                </HorizontalStackLayout>
+                <VerticalStackLayout>
+                    <Label FontSize="Header" Text="Detected Local Hotlines"></Label>
+                    <ListView>
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <FlexLayout>
+                                        <VerticalStackLayout>
+                                            <Label Text="{Binding HotlineName}"></Label>
+                                            <Label Text="{Binding HotlineNo}"></Label>
+                                        </VerticalStackLayout>
+                                        <VerticalStackLayout></VerticalStackLayout>
+                                    </FlexLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </VerticalStackLayout>
+            </VerticalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
